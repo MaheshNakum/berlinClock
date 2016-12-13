@@ -5,7 +5,7 @@ import org.junit.Test;
  * Created by maheshnakum on 13/12/2016.
  */
 public class SecondTest {
-    
+
     @Test
     public void convertSecond() throws Exception {
 
