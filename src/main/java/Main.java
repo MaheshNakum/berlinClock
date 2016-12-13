@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserInput time = new UserInput("16:59:59");
+        UserInput time = new UserInput("13:24:09");
         time.convertTimeInputToTime();
 
         Second second = new Second(time.getSecond());
@@ -31,7 +31,15 @@ public class Main {
         System.out.println("OneHourRow: " + Arrays.toString(hour.getOneHourRow()));
         System.out.println("----------------------------------------");
 
+        Minute minute = new Minute(time.getMinute());
+        minute.minuteConvertFiveMinuteRow();
+        minute.minuteConvertOneMinuteRow();
 
+        System.out.println("FiveMinuteRow: " + Arrays.toString(minute.getFiveMinuteRow()));
+        System.out.println("----------------------------------------");
+
+        System.out.println("OneMinuteRow: " + Arrays.toString(minute.getOneMinuteRow()));
+        System.out.println("----------------------------------------");
 
 
     } //end of main
