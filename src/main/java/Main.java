@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by maheshnakum on 13/12/2016.
  */
@@ -5,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserInput time = new UserInput("23:59:59");
+        UserInput time = new UserInput("16:59:59");
         time.convertTimeInputToTime();
 
         Second second = new Second(time.getSecond());
@@ -21,7 +23,15 @@ public class Main {
         System.out.println("----------------------------------------");
 
         Hour hour = new Hour(time.getHour());
-        hour.convertHour();
+        hour.convertHourFiveRow();
+        hour.convertHourOneRow();
+
+        System.out.println("FiveHourRow: " + Arrays.toString(hour.getFiveHourRow()));
+        System.out.println("----------------------------------------");
+        System.out.println("OneHourRow: " + Arrays.toString(hour.getOneHourRow()));
+        System.out.println("----------------------------------------");
+
+
 
 
     } //end of main

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Created by maheshnakum on 13/12/2016.
  */
@@ -13,35 +11,43 @@ public class Hour {
         this.hour = hour;
     }
 
-    public void convertHour(){
+    public String[] getFiveHourRow() {
+        return fiveHourRow;
+    }
+
+
+    public String[] getOneHourRow() {
+        return oneHourRow;
+    }
+
+    public String[] convertHourFiveRow() {
 
         int fiveHourHour = hour;
-        int fiveHourCounter = 0;
 
-        for (String e : fiveHourRow){
-
-            if (fiveHourHour >=5){
-                fiveHourRow[fiveHourCounter] = "R";
-                fiveHourCounter++;
+        for (int i=0;i<fiveHourRow.length;i++){
+            if (fiveHourHour >= 5) {
+                fiveHourRow[i] = "R";
                 fiveHourHour = fiveHourHour - 5;
-            } //end of if
-        } // end of loop
-
-        System.out.println("fiveHourRow: " + Arrays.toString(fiveHourRow));  // to be removed
-
-        int oneHourHour = hour % 5;
-        int oneHourCounter = 0;
-
-        for (String e : oneHourRow){
-            if (oneHourHour > 0){
-                oneHourRow[oneHourCounter] = "R";
-                oneHourCounter++;
-                oneHourHour--;
             } //end of if
         } //end of loop
 
-        System.out.println("oneHourRow: " + Arrays.toString(oneHourRow)); //to be removed
-        System.out.println("----------------------------------------");
+        return fiveHourRow;
+
+    } // close of method
+
+    public String[] convertHourOneRow(){
+
+        int oneHourHour = hour % 5;
+        //int oneHourCounter = 0;
+
+        for (int i=0;i<oneHourRow.length;i++){
+            if (oneHourHour > 0){
+                oneHourRow[i] = "R";
+                oneHourHour--;
+               } //end of if
+        } // end of loop
+
+        return oneHourRow;
 
     } //end of method
 
