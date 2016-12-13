@@ -43,7 +43,7 @@ public class UserInput {
         this.second = second;
     }
 
-    public void convertTimeInputToTime(){
+    public void convertInputToTime(){
 
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         Date date = null;

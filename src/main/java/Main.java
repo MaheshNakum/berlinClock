@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         UserInput time = new UserInput("13:24:09");
-        time.convertTimeInputToTime();
+        time.convertInputToTime();
 
         System.out.println("HourSet: " + time.getHour());
         System.out.println("MinuteSet: " + time.getMinute());
@@ -15,12 +15,12 @@ public class Main {
 
 
         Hour hour = new Hour(time.getHour());
-        hour.convertHourFiveRow();
-        hour.convertHourOneRow();
+        hour.convertHourFiveHourRow();
+        hour.convertHourOneHourRow();
 
         Minute minute = new Minute(time.getMinute());
-        minute.minuteConvertFiveMinuteRow();
-        minute.minuteConvertOneMinuteRow();
+        minute.convertMinuteFiveMinuteRow();
+        minute.convertMinuteOneMinuteRow();
 
         Second second = new Second(time.getSecond());
         second.convertSecond();

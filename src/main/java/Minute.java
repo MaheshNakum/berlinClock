@@ -18,7 +18,7 @@ public class Minute {
         return oneMinuteRow;
     }
 
-    public String[] minuteConvertFiveMinuteRow(){
+    public String[] convertMinuteFiveMinuteRow(){
 
         int fiveMinuteMinute = minute;
         int counter = 5;
@@ -35,7 +35,7 @@ public class Minute {
         return fiveMinuteRow;
     } //end method
 
-    public String[] minuteConvertOneMinuteRow(){
+    public String[] convertMinuteOneMinuteRow(){
 
         int oneMinuteMinute = minute % 5;
 

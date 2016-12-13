@@ -8,13 +8,11 @@ public class MinuteTest {
 
     private int minute = 17;
     private Minute minute1 = new Minute(minute);
-    private String fiveMinuteRow[] = new String[]{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O"};
-    private String oneMinuteRow[] = new String[]{"O", "O", "O", "O"};
 
     @Test
     public void minuteConvertFiveMinuteRow() throws Exception {
 
-        minute1.minuteConvertFiveMinuteRow();
+        minute1.convertMinuteFiveMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "R", "O", "O", "O", "O", "O", "O", "O", "O"};
 
@@ -25,7 +23,7 @@ public class MinuteTest {
     @Test
     public void minuteConvertOneMinuteRow() throws Exception {
 
-        minute1.minuteConvertOneMinuteRow();
+        minute1.convertMinuteOneMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "O", "O"};
 

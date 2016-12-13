@@ -8,13 +8,11 @@ public class HourTest {
 
     private int hour = 17;
     private Hour hour1 = new Hour(hour);
-    private String[] fiveHourRow = new String[]{"O", "O", "O", "O"};
-    private String[] oneHourRow = new String[]{"O", "O", "O", "O"};
 
     @Test
     public void convertHourFiveRow() throws Exception {
 
-        hour1.convertHourFiveRow();
+        hour1.convertHourFiveHourRow();
 
         String[] ExpectedOutcome = new String[]{"R", "R", "R", "O"};
 
@@ -25,7 +23,7 @@ public class HourTest {
     @Test
     public void convertHourOneRow() throws Exception {
 
-        hour1.convertHourOneRow();
+        hour1.convertHourOneHourRow();
 
         String[] ExpectedOutcome = new String[]{"R", "R", "O", "O"};
 

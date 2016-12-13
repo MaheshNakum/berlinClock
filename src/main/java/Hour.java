@@ -20,7 +20,7 @@ public class Hour {
         return oneHourRow;
     }
 
-    public String[] convertHourFiveRow() {
+    public String[] convertHourFiveHourRow() {
 
         int fiveHourHour = hour;
 
@@ -35,7 +35,7 @@ public class Hour {
 
     } // close of method
 
-    public String[] convertHourOneRow(){
+    public String[] convertHourOneHourRow(){
 
         int oneHourHour = hour % 5;
         //int oneHourCounter = 0;
