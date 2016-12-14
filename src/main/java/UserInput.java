@@ -13,7 +13,6 @@ public class UserInput {
         this.userTimeInput = userTimeInput;
     }
 
-
     private String userTimeInput;
     private int hour;
     private int minute;
@@ -41,6 +40,26 @@ public class UserInput {
 
     private void setSecond(int second) {
         this.second = second;
+    }
+
+    public void validateUserInput(){
+        String[] inputArray = userTimeInput.split(":");
+
+        int h = Integer.parseInt(inputArray[0]);
+        int m = Integer.parseInt(inputArray[1]);
+        int s = Integer.parseInt(inputArray[2]);
+
+        if (h < 0 || h > 23){
+            throw new IllegalArgumentException("Not a valid hour!");
+        }
+
+        if (m < 0 || m > 59){
+            throw new IllegalArgumentException("Not a valid minute!");
+        }
+
+        if (s < 0 || s > 59){
+            throw new IllegalArgumentException("Not a valid hour!");
+        }
     }
 
     public void convertInputToTime(){

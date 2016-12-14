@@ -5,7 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserInput time = new UserInput("13:24:09");
+        UserInput time = new UserInput("00:35:09");
+        time.validateUserInput();
         time.convertInputToTime();
 
         System.out.println("HourSet: " + time.getHour());
