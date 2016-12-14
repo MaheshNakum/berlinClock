@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserInput time = new UserInput("17:16:48");
+        UserInput time = new UserInput("05:45:32");
         time.validateUserInput();
         time.convertInputToTime();
 
