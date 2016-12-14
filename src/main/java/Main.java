@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by maheshnakum on 13/12/2016.
  */
@@ -5,15 +7,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        UserInput time = new UserInput("05:45:32");
+        Scanner input = new Scanner(System.in);
+        String timeEntered;
+        System.out.println("Enter a time in the format of HH:MM:ss after the colon");
+        System.out.print("Enter time after the colon : ");
+        timeEntered = input.next();
+
+        UserInput time = new UserInput(timeEntered);
         time.validateUserInput();
         time.convertInputToTime();
-
-        System.out.println("HourSet: " + time.getHour());
-        System.out.println("MinuteSet: " + time.getMinute());
-        System.out.println("SecondSet: " + time.getSecond());
-        System.out.println("----------------------------------------");
-
 
         Hour hour = new Hour(time.getHour());
         hour.convertHourFiveHourRow();
