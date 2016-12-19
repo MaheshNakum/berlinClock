@@ -42,24 +42,19 @@ public class UserInput {
         this.second = second;
     }
 
-    public void validateUserInput(){
+    public boolean validateUserInput(){
         String[] inputArray = userTimeInput.split(":");
 
         int h = Integer.parseInt(inputArray[0]);
         int m = Integer.parseInt(inputArray[1]);
         int s = Integer.parseInt(inputArray[2]);
+        
 
-        if (h < 0 || h > 23){
-            throw new IllegalArgumentException("Not a valid hour!");
-        }
+        if ((h < 0 || h > 23) || (m < 0 || m > 59) || (s < 0 || s > 59)){
+            throw new IllegalArgumentException("Not a input!");
 
-        if (m < 0 || m > 59){
-            throw new IllegalArgumentException("Not a valid minute!");
         }
-
-        if (s < 0 || s > 59){
-            throw new IllegalArgumentException("Not a valid hour!");
-        }
+        return true;
     }
 
     public void convertInputToTime(){

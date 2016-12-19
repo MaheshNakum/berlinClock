@@ -15,7 +15,6 @@ public class Hour {
         return fiveHourRow;
     }
 
-
     public String[] getOneHourRow() {
         return oneHourRow;
     }

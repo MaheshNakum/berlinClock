@@ -15,6 +15,7 @@ public class Main {
 
         UserInput time = new UserInput(timeEntered);
         time.validateUserInput();
+        System.out.println(time.validateUserInput());
         time.convertInputToTime();
 
         Hour hour = new Hour(time.getHour());
