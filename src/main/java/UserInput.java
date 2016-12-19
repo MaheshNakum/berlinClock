@@ -48,7 +48,7 @@ public class UserInput {
         int h = Integer.parseInt(inputArray[0]);
         int m = Integer.parseInt(inputArray[1]);
         int s = Integer.parseInt(inputArray[2]);
-        
+
 
         if ((h < 0 || h > 23) || (m < 0 || m > 59) || (s < 0 || s > 59)){
             throw new IllegalArgumentException("Not a input!");
@@ -73,10 +73,7 @@ public class UserInput {
         setMinute(calendar.get(Calendar.MINUTE));
         setSecond(calendar.get(Calendar.SECOND));
 
-
-
     } //end of method
-
 
 
 } //end of class

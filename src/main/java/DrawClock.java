@@ -44,16 +44,16 @@ public class DrawClock {
         System.out.println("╚═══════╝╚═══════╝╚═══════╝╚═══════╝");
         System.out.println("╔═╗╔═╗╔═╗ ╔═╗╔═╗╔═╗ ╔═╗╔═╗╔═╗ ╔═╗╔═╗");
         System.out.println("║" + minute.getFiveMinuteRow()[0] + "║" + "║"
-                +minute.getFiveMinuteRow()[1]+ "║"+"║"
-                +minute.getFiveMinuteRow()[2]+ "║"+" ║"
-                +minute.getFiveMinuteRow()[3]+ "║"+"║"
-                +minute.getFiveMinuteRow()[4]+ "║"+"║"
-                +minute.getFiveMinuteRow()[5]+ "║"+" ║"
-                +minute.getFiveMinuteRow()[6]+ "║"+"║"
-                +minute.getFiveMinuteRow()[7]+ "║"+"║"
-                +minute.getFiveMinuteRow()[8]+ "║"+" ║"
-                +minute.getFiveMinuteRow()[9]+ "║"+"║"
-                +minute.getFiveMinuteRow()[10]+ "║");
+                + minute.getFiveMinuteRow()[1] + "║" + "║"
+                + minute.getFiveMinuteRow()[2] + "║" + " ║"
+                + minute.getFiveMinuteRow()[3] + "║" + "║"
+                + minute.getFiveMinuteRow()[4] + "║" + "║"
+                + minute.getFiveMinuteRow()[5] + "║" + " ║"
+                + minute.getFiveMinuteRow()[6] + "║" + "║"
+                + minute.getFiveMinuteRow()[7] + "║" + "║"
+                + minute.getFiveMinuteRow()[8] + "║" + " ║"
+                + minute.getFiveMinuteRow()[9] + "║" + "║"
+                + minute.getFiveMinuteRow()[10] + "║");
         System.out.println("╚═╝╚═╝╚═╝ ╚═╝╚═╝╚═╝ ╚═╝╚═╝╚═╝ ╚═╝╚═╝");
         System.out.println("╔═══════╗╔═══════╗╔═══════╗╔═══════╗");
         System.out.println("║   " + minute.getOneMinuteRow()[0] + "   ║║   " + minute.getOneMinuteRow()[1] + "   ║║   " + minute.getOneMinuteRow()[2] + "   ║║   " + minute.getOneMinuteRow()[3] + "   ║");
