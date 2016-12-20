@@ -10,7 +10,11 @@ import java.util.GregorianCalendar;
 public class UserInput {
 
     public UserInput (String userTimeInput){
+
         this.userTimeInput = userTimeInput;
+
+
+
     }
 
     private String userTimeInput;
@@ -43,6 +47,7 @@ public class UserInput {
     }
 
     public boolean validateUserInput(){
+
         String[] inputArray = userTimeInput.split(":");
 
         int h = Integer.parseInt(inputArray[0]);
