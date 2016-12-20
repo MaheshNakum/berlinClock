@@ -9,10 +9,10 @@ public class SecondTest {
     @Test
     public void convertSecond() throws Exception {
 
-        int testSecond1 = 10;
+        int second1 = 10;
 
-        Second second = new Second(testSecond1);
-        second.convertSecond();
+        Second second = new Second(second1);
+
 
         Assert.assertEquals("Y", second.convertSecond());
 
