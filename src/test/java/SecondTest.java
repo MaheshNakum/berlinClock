@@ -6,6 +6,9 @@ import static org.hamcrest.core.Is.is;
 /**
  * Created by maheshnakum on 13/12/2016.
  */
+
+//test using hamcrest library
+
 public class SecondTest {
 
     @Test
@@ -16,7 +19,6 @@ public class SecondTest {
 
         Second second = new Second(second1);
 
-        //Assert.assertEquals("Y", second.convertSecond());
         assertThat(second.convertSecond(), is(result));
 
     }

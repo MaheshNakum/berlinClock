@@ -1,6 +1,5 @@
 1.  Add in Exceptions for time input. //done
 2.  Look at the return types.
 3.  Look at using composition
-4.  Create a test for timeInput -
-5.  Investigate the draw - manually drawn for now
-6.  Add userInput - //done using scanner
+4.  Investigate the draw - manually drawn for now
+5.  Add userInput - //done using scanner

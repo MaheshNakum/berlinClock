@@ -26,7 +26,7 @@ public class Main {
         minute.convertMinuteOneMinuteRow();
 
         Second second = new Second(time.getSecond());
-        second.convertSecond();
+        //second.convertSecond();
 
         DrawClock drawClock = new DrawClock(hour, minute, second);
         drawClock.drawClock();

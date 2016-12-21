@@ -13,8 +13,6 @@ public class UserInput {
 
         this.userTimeInput = userTimeInput;
 
-
-
     }
 
     private String userTimeInput;

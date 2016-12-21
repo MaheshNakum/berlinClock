@@ -37,7 +37,6 @@ public class Hour {
     public String[] convertHourOneHourRow(){
 
         int oneHourHour = hour % 5;
-        //int oneHourCounter = 0;
 
         for (int i=0;i<oneHourRow.length;i++){
             if (oneHourHour > 0){
