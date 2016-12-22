@@ -7,6 +7,7 @@ public class DrawClock {
     private Minute minute;
     private Second second;
 
+
     public DrawClock(Hour hour, Minute minute, Second second) {
         this.hour = hour;
         this.minute = minute;
@@ -14,25 +15,9 @@ public class DrawClock {
     }
 
     public void drawClock() {
-
-        /*System.out.println("SecondString: " + second.convertSecond());
-        System.out.println("----------------------------------------");
-
-        System.out.println("FiveHourRow: " + Arrays.toString(hour.getFiveHourRow()));
-        System.out.println("----------------------------------------");
-        System.out.println("OneHourRow: " + Arrays.toString(hour.getOneHourRow()));
-        System.out.println("----------------------------------------");
-
-        System.out.println("FiveMinuteRow: " + Arrays.toString(minute.getFiveMinuteRow()));
-        System.out.println("----------------------------------------");
-
-        System.out.println("OneMinuteRow: " + Arrays.toString(minute.getOneMinuteRow()));
-        System.out.println("----------------------------------------");*/
-
-
         System.out.println("                *   *  ");
         System.out.println("               *     * ");
-        System.out.println("              *   " + second.convertSecond() + "   *");
+        System.out.println("              *   " + second.getSecond() + "   *");
         System.out.println("               *     * ");
         System.out.println("                *   *  ");
 
@@ -58,6 +43,23 @@ public class DrawClock {
         System.out.println("╔═══════╗╔═══════╗╔═══════╗╔═══════╗");
         System.out.println("║   " + minute.getOneMinuteRow()[0] + "   ║║   " + minute.getOneMinuteRow()[1] + "   ║║   " + minute.getOneMinuteRow()[2] + "   ║║   " + minute.getOneMinuteRow()[3] + "   ║");
         System.out.println("╚═══════╝╚═══════╝╚═══════╝╚═══════╝");
+
+
+
+
+        /*System.out.println("SecondString: " + second.convertSecond());
+        System.out.println("----------------------------------------");
+
+        System.out.println("FiveHourRow: " + Arrays.toString(hour.getFiveHourRow()));
+        System.out.println("----------------------------------------");
+        System.out.println("OneHourRow: " + Arrays.toString(hour.getOneHourRow()));
+        System.out.println("----------------------------------------");
+
+        System.out.println("FiveMinuteRow: " + Arrays.toString(minute.getFiveMinuteRow()));
+        System.out.println("----------------------------------------");
+
+        System.out.println("OneMinuteRow: " + Arrays.toString(minute.getOneMinuteRow()));
+        System.out.println("----------------------------------------");*/
 
 
     }

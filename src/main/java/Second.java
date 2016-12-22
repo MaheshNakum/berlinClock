@@ -3,13 +3,19 @@
  */
 public class Second {
 
+
+
     private int second;
 
     public Second(int second){
         this.second = second;
     }
 
-    public String convertSecond(){
+    public String getSecond() {
+        return convertSecond();
+    }
+
+    private String convertSecond(){
         if (second % 2 == 0){
             return "Y";
         }

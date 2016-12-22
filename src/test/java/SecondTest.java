@@ -7,19 +7,18 @@ import static org.hamcrest.core.Is.is;
  * Created by maheshnakum on 13/12/2016.
  */
 
-//test using hamcrest library
-
 public class SecondTest {
 
     @Test
     public void convertSecond() throws Exception {
 
-        int second1 = 10;
-        String result = "Y";
+        int setSecond = 10;
+        Second second = new Second(setSecond);
 
-        Second second = new Second(second1);
+        String expectedOutcome = "Y";
+        String actualOutcome = second.getSecond();
 
-        assertThat(second.convertSecond(), is(result));
+        assertThat(actualOutcome, is(expectedOutcome));
 
     }
 
