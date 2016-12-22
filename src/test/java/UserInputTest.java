@@ -10,8 +10,9 @@ public class UserInputTest {
     public void validateUserInput() throws Exception {
 
         UserInput time = new UserInput("10:30:23");
+        Boolean actualOutcome = time.validateUserInput();
 
-        assertThat(time.validateUserInput(), is(true));
+        assertThat(actualOutcome, is(true));
 
     }
 
@@ -21,9 +22,15 @@ public class UserInputTest {
         UserInput time = new UserInput("10:30:23");
         time.convertInputToTime();
 
-        assertThat(time.getSecond(), is(23));
-        assertThat(time.getMinute(), is(30));
-        assertThat(time.getHour(), is(10));
+        int actualHour = time.getHour();
+        int actualMinute = time.getMinute();
+        int actualSecond = time.getSecond();
+
+
+
+        assertThat(actualSecond, is(23));
+        assertThat(actualMinute, is(30));
+        assertThat(actualHour, is(10));
     }
 
 }

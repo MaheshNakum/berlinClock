@@ -1,34 +1,35 @@
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.Matchers.arrayContaining;
+import static org.junit.Assert.assertThat;
 
 /**
  * Created by maheshnakum on 13/12/2016.
  */
 public class MinuteTest {
 
-    private int minute = 17;
-    private Minute minute1 = new Minute(minute);
+    private int setMinute = 17;
+    private Minute minute = new Minute(setMinute);
 
     @Test
     public void minuteConvertFiveMinuteRow() throws Exception {
 
-        minute1.convertMinuteFiveMinuteRow();
+        String[] actualOutcome = minute.convertMinuteFiveMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "R", "O", "O", "O", "O", "O", "O", "O", "O"};
 
-        Assert.assertArrayEquals(expectedOutcome, minute1.getFiveMinuteRow());
+        assertThat(actualOutcome, arrayContaining(expectedOutcome));
 
     }
 
     @Test
     public void minuteConvertOneMinuteRow() throws Exception {
 
-        minute1.convertMinuteOneMinuteRow();
+        String[] actualOutcome = minute.convertMinuteOneMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "O", "O"};
 
-        Assert.assertArrayEquals(expectedOutcome, minute1.getOneMinuteRow());
-
+        assertThat(actualOutcome, arrayContaining(expectedOutcome));
 
     }
 
