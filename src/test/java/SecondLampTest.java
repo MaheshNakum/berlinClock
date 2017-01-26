@@ -7,16 +7,16 @@ import static org.hamcrest.core.Is.is;
  * Created by maheshnakum on 13/12/2016.
  */
 
-public class SecondTest {
+public class SecondLampTest {
 
     @Test
     public void convertSecond() throws Exception {
 
         int setSecond = 10;
-        Second second = new Second(setSecond);
+        SecondLamp secondLamp = new SecondLamp(setSecond);
 
         String expectedOutcome = "Y";
-        String actualOutcome = second.getSecond();
+        String actualOutcome = secondLamp.getSecond();
 
         assertThat(actualOutcome, is(expectedOutcome));
 

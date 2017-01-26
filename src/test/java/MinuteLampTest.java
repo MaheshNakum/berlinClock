@@ -6,15 +6,15 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by maheshnakum on 13/12/2016.
  */
-public class MinuteTest {
+public class MinuteLampTest {
 
-    private int setMinute = 17;
-    private Minute minute = new Minute(setMinute);
+    private final int setMinute = 17;
+    private final MinuteLamp minuteLamp = new MinuteLamp(setMinute);
 
     @Test
     public void minuteConvertFiveMinuteRow() throws Exception {
 
-        String[] actualOutcome = minute.convertMinuteFiveMinuteRow();
+        String[] actualOutcome = minuteLamp.convertFiveMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "R", "O", "O", "O", "O", "O", "O", "O", "O"};
 
@@ -25,7 +25,7 @@ public class MinuteTest {
     @Test
     public void minuteConvertOneMinuteRow() throws Exception {
 
-        String[] actualOutcome = minute.convertMinuteOneMinuteRow();
+        String[] actualOutcome = minuteLamp.convertOneMinuteRow();
 
         String[] expectedOutcome = new String[]{"Y", "Y", "O", "O"};
 

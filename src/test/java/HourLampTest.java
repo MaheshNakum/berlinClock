@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.arrayContaining;
 /**
  * Created by maheshnakum on 13/12/2016.
  */
-public class HourTest {
+public class HourLampTest {
 
-    private int setHour = 17;
-    private Hour hour = new Hour(setHour);
+    private final int setHour = 17;
+    private final HourLamp hourLamp = new HourLamp(setHour);
 
     @Test
     public void convertHourFiveRow() throws Exception {
 
-        String[] ActualOutcome = hour.convertHourFiveHourRow();
+        String[] ActualOutcome = hourLamp.convertFiveHourRow();
 
         String[] ExpectedOutcome = new String[]{"R", "R", "R", "O"};
 
@@ -26,7 +26,7 @@ public class HourTest {
     @Test
     public void convertHourOneRow() throws Exception {
 
-        String[] ActualOutcome = hour.convertHourOneHourRow();
+        String[] ActualOutcome = hourLamp.convertOneHourRow();
 
         String[] ExpectedOutcome = new String[]{"R", "R", "O", "O"};
 

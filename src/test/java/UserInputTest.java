@@ -20,7 +20,7 @@ public class UserInputTest {
     public void convertInputToTime() throws Exception {
 
         UserInput time = new UserInput("10:30:23");
-        time.convertInputToTime();
+        time.convertInputToTimeFormat();
 
         int actualHour = time.getHour();
         int actualMinute = time.getMinute();

@@ -4,10 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-/**
- * Created by maheshnakum on 13/12/2016.
- */
-public class UserInput {
+class UserInput {
 
     public UserInput (String userTimeInput){
 
@@ -15,7 +12,7 @@ public class UserInput {
 
     }
 
-    private String userTimeInput;
+    private final String userTimeInput;
     private int hour;
     private int minute;
     private int second;
@@ -46,26 +43,26 @@ public class UserInput {
 
     public boolean validateUserInput(){
 
-        String[] inputArray = userTimeInput.split(":");
+        String[] TimeArray = userTimeInput.split(":");
 
-        int h = Integer.parseInt(inputArray[0]);
-        int m = Integer.parseInt(inputArray[1]);
-        int s = Integer.parseInt(inputArray[2]);
+        int hour = Integer.parseInt(TimeArray[0]);
+        int minute = Integer.parseInt(TimeArray[1]);
+        int second = Integer.parseInt(TimeArray[2]);
 
 
-        if ((h < 0 || h > 23) || (m < 0 || m > 59) || (s < 0 || s > 59)){
+        if ((hour < 0 || hour > 23) || (minute < 0 || minute > 59) || (second < 0 || second > 59)){
             throw new IllegalArgumentException("Not a valid input of Time!");
 
         }
         return true;
     }
 
-    public void convertInputToTime(){
+    public void convertInputToTimeFormat(){
 
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
         Date date = null;
         try {
-            date = sdf.parse(userTimeInput);
+            date = simpleDateFormat.parse(userTimeInput);
         } catch (ParseException e) {
             e.printStackTrace();
         }

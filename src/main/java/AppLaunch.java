@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
-/**
- * Created by maheshnakum on 13/12/2016.
- */
-public class Main {
+class AppLaunch {
 
     public static void main(String[] args) {
 
@@ -15,19 +12,19 @@ public class Main {
 
         UserInput time = new UserInput(timeEntered);
         time.validateUserInput();
-        time.convertInputToTime();
+        time.convertInputToTimeFormat();
 
-        Hour hour = new Hour(time.getHour());
-        hour.convertHourFiveHourRow();
-        hour.convertHourOneHourRow();
+        HourLamp hourLamp = new HourLamp(time.getHour());
+        hourLamp.convertFiveHourRow();
+        hourLamp.convertOneHourRow();
 
-        Minute minute = new Minute(time.getMinute());
-        minute.convertMinuteFiveMinuteRow();
-        minute.convertMinuteOneMinuteRow();
+        MinuteLamp minuteLamp = new MinuteLamp(time.getMinute());
+        minuteLamp.convertFiveMinuteRow();
+        minuteLamp.convertOneMinuteRow();
 
-        Second second = new Second(time.getSecond());
+        SecondLamp secondLamp = new SecondLamp(time.getSecond());
 
-        DrawClock drawClock = new DrawClock(hour, minute, second);
+        DrawClock drawClock = new DrawClock(hourLamp, minuteLamp, secondLamp);
         drawClock.drawClock();
 
 
